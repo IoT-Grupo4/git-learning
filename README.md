@@ -1,4 +1,4 @@
-# git-learning
+# Aprendendo Git
 
 ----
 
@@ -51,13 +51,13 @@ Caso venha a fazer o clone de um repositório privado (o que não deve ser o nos
 	git add <nome do(s) arquivo(s) ou diretório(s)>
 	git commit [-m <texto do commit>]
 
-#### Sincronizando o conteúdo local com o da núvem
+#### Sincronizando o conteúdo local com o da nuvem
 
-Baixe as modificações na núvem e corrija as diferenças
+Baixe as modificações na nuvem e corrija as diferenças
 
 	git pull [-r] [<nome do remote> <nome da branch>]
 
-Suba para a núvem suas alterações
+Suba para a nuvem suas alterações
 
 	git push [<nome do remote> <nome da branch>]
 
@@ -113,5 +113,38 @@ Mescle as branchs:
 	git branch <-D | -d | --delete> <nome da branch>
 
 ----
+
+## No que o git pode ser útil para nós?
+
+----
+
+#### Histórico de modificações
+
+	git log
+
+#### Desfazendo modificações
+
+	git checkout <arquivo(s) ou pasta(s) rastreados que sofreram alterações>
+
+#### Recuperando versões antigas do código
+
+- Utilize `git log` para localizar a versão que deseja restaurar
+- Copie ao menos os 7 primeiros dígitos da *hash* do commit desejado
+- Mude para a versão desejada com:
+
+	`git checkout <hash do commit>`
+
+----
+
+#### Recuperando versões antigas do código (versão 2)
+
+É possível criar `tags` para um determinado estado do código, com:
+
+	git tag <nome da tag>
+
+Assim, podemos definir estados específicos do código, com **Versão x** ou **Release a.b-c**. De forma análoga, podemos mudar para a versão do código recebeu a *tag* com:
+
+	git checkout <tag>
+
 
 Imagens de [Roger Dudler](http://rogerdudler.github.io/git-guide/)
