@@ -1,26 +1,9 @@
 # Nomes:
 
  - Luiz
-<<<<<<< HEAD
  - João
-
+ - Kim
+ - Wanessa
+ - Larinni
  - Felipe
-=======
  - Vitor
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- - Vitor
->>>>>>> f94575125ce44c228f26b10557245572346f7972
