@@ -48,6 +48,14 @@ class Poligono(object):
 
         return '{}'.format(dados)
 
+
+class Quadrado(Poligono):
+    """Poligono de 4 lados"""
+    def __init__(self, tamanho):
+        super(Quadrado, self).__init__(n=4,tamanho=tamanho)
+        self.tamanho = tamanho
+        
+
 n = int(input('Entre um número: '))
 print ("fatorial de {} = {}".format( n, factorial(n)))
 print('Fibonacci de {} = {}'.format(n, fibonacci(n)))
@@ -60,5 +68,11 @@ print('A área do poligono de {} lados de tamanho 2 é: {:.2f}'.format(n,poli.á
 # imprimindo saída padrão do objeto
 print(poli)
 
+# quadrado de lado n
+quadrado = Quadrado(n)
+
+print(quadrado)
+
 # imprimindo atributos do objeto como um JSON
 print(json.dumps(poli.__dict__))
+print(json.dumps(quadrado.__dict__))
