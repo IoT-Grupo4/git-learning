@@ -51,6 +51,29 @@ class Poligono(object):
 
         return '{}'.format(dados)
 
+    def __add__(self, other):
+        return self.área() + other.área()
+
+
+    def __lt__(self, other):
+        # <
+        pass
+    def __le__(self, other):
+        # <=
+        pass
+    def __eq__(self, other):
+        # ==
+        pass
+    def __ne__(self, other):
+        # !=
+        pass
+    def __gt__(self, other):
+        # >
+        pass
+    def __ge__(self, other):
+        # >=
+        pass
+
 
 class Quadrado(Poligono):
     """Poligono de 4 lados"""
@@ -75,6 +98,7 @@ print(poli)
 quadrado = Quadrado(n)
 
 print(quadrado)
+print("A soma das áreas é:", quadrado + poli)
 
 # imprimindo atributos do objeto como um JSON
 print(json.dumps(poli.__dict__))
