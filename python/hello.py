@@ -1,7 +1,10 @@
 import json
 from math import sin, cos, pi
+# importa todos os pacotes do módulo.
+# https://docs.python.org/3/library/os.html
+from sys import platform
 
-print('hello world in python!')
+print('hello world in python using {}!'.format(platform))
 
 
 def factorial(n):
