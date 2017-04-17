@@ -1,3 +1,7 @@
+"""
+Módulo para introdução ao Python
+"""
+
 import json
 from math import sin, cos, pi
 # importa todos os pacotes do módulo.
@@ -14,7 +18,7 @@ def factorial(n):
     else:
         return n*factorial(n-1 )
 
-def fibonacci(n):
+def fibonacci(n=5):
     """Retorna uma lista com os N primeiros números da
     sequencia de Fibonacci"""
     fibonacci_list = [0,1] # uma lista
@@ -41,6 +45,7 @@ class Poligono(object):
         return self.n*self.tamanho/2.0
         
     def área(self):
+        """retorna a área do poligono"""
         return self.semiperímetro()*self.apótema()
 
     def __str__(self):
@@ -86,20 +91,20 @@ n = int(input('Entre um número: '))
 print ("fatorial de {} = {}".format( n, factorial(n)))
 print('Fibonacci de {} = {}'.format(n, fibonacci(n)))
 
-poli = Poligono(n,2)
+_poli_ = Poligono(n,2)
 
 # imprimindo dado formatado
-print('A área do poligono de {} lados de tamanho 2 é: {:.2f}'.format(n,poli.área()))
+print('A área do poligono de {} lados de tamanho 2 é: {:.2f}'.format(n,_poli_.área()))
 
 # imprimindo saída padrão do objeto
-print(poli)
+print(_poli_)
 
 # quadrado de lado n
 quadrado = Quadrado(n)
 
 print(quadrado)
-print("A soma das áreas é:", quadrado + poli)
+print("A soma das áreas é:", quadrado + _poli_)
 
 # imprimindo atributos do objeto como um JSON
-print(json.dumps(poli.__dict__))
+print(json.dumps(_poli_.__dict__))
 print(json.dumps(quadrado.__dict__))
