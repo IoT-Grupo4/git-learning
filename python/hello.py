@@ -21,9 +21,9 @@ def factorial(n):
 def fibonacci(n=5):
     """Retorna uma lista com os N primeiros números da
     sequencia de Fibonacci"""
-    fibonacci_list = [0,1] # uma lista
-    for i in range(2,n):
-        fibonacci_list.append(fibonacci_list[i-1]+fibonacci_list[i-2] )
+    fibonacci_list = [0, 1] # uma lista
+    for i in range(2, n):
+        fibonacci_list.append(fibonacci_list[i-1] + fibonacci_list[i-2])
 
     return fibonacci_list
 
@@ -43,7 +43,7 @@ class Poligono(object):
 
     def semiperímetro(self):
         return self.n*self.tamanho/2.0
-        
+
     def área(self):
         """retorna a área do poligono"""
         return self.semiperímetro()*self.apótema()
@@ -85,16 +85,16 @@ class Quadrado(Poligono):
     def __init__(self, tamanho):
         super(Quadrado, self).__init__(n=4,tamanho=tamanho)
         self.tamanho = tamanho
-        
+
 
 n = int(input('Entre um número: '))
-print ("fatorial de {} = {}".format( n, factorial(n)))
+print("fatorial de {} = {}".format(n, factorial(n)))
 print('Fibonacci de {} = {}'.format(n, fibonacci(n)))
 
-_poli_ = Poligono(n,2)
+_poli_ = Poligono(n, 2)
 
 # imprimindo dado formatado
-print('A área do poligono de {} lados de tamanho 2 é: {:.2f}'.format(n,_poli_.área()))
+print('A área do poligono de {} lados de tamanho 2 é: {:.2f}'.format(n, _poli_.área()))
 
 # imprimindo saída padrão do objeto
 print(_poli_)
